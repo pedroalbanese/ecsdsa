@@ -9,6 +9,7 @@ import (
 	"math/big"
 
 	"github.com/pedroalbanese/brainpool"
+	"github.com/pedroalbanese/frp256v1"
 	"github.com/pedroalbanese/secp256k1"
 	"golang.org/x/crypto/cryptobyte"
 )
@@ -24,6 +25,7 @@ var (
 	oidNamedCurveP521 = asn1.ObjectIdentifier{1, 3, 132, 0, 35}
 	
 	oidNamedCurveS256 = asn1.ObjectIdentifier{1, 3, 132, 0, 10}
+	oidANSSIFRP256v1 = asn1.ObjectIdentifier{1, 2, 250, 1, 223, 101, 256, 1}
 
 	oidBrainpoolP256r1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 7}
 	oidBrainpoolP256t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 8}
@@ -40,6 +42,7 @@ func init() {
 	AddNamedCurve(elliptic.P521(), oidNamedCurveP521)
 	
 	AddNamedCurve(secp256k1.S256(), oidNamedCurveS256)
+	AddNamedCurve(frp256v1.P256(), oidANSSIFRP256v1)
 
 	AddNamedCurve(brainpool.P256r1(), oidBrainpoolP256r1)
 	AddNamedCurve(brainpool.P256t1(), oidBrainpoolP256t1)
