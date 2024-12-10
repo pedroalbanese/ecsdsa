@@ -299,7 +299,7 @@ func parseECPrivateKey(namedCurveOID *asn1.ObjectIdentifier, der []byte) (key *P
 	copy(privateKey[len(privateKey)-len(privKey.PrivateKey):], privKey.PrivateKey)
 
 	d := new(big.Int).SetBytes(privateKey)
-	priv.X, priv.Y = XY(d, curve)
+	priv.X, priv.Y = curve.ScalarBaseMult(d.Bytes())
 
 	return priv, nil
 }
