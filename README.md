@@ -1,2 +1,2 @@
 # ecsdsa
-Elliiptic Curve Schnorr Digital Signature Algorithm
+Elliptic Curve Schnorr Digital Signature Algorithm
