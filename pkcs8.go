@@ -16,7 +16,7 @@ import (
 const ecPrivKeyVersion = 1
 
 var (
-	oidPublicKeyECSDSA = asn1.ObjectIdentifier{1, 0, 14888, 3, 0, 14}
+	oidPublicKeyECSDSA = asn1.ObjectIdentifier{1, 0, 14888, 3, 0, 11}
 
 	oidNamedCurveP224 = asn1.ObjectIdentifier{1, 3, 132, 0, 33}
 	oidNamedCurveP256 = asn1.ObjectIdentifier{1, 2, 840, 10045, 3, 1, 7}
