@@ -10,6 +10,7 @@ import (
 
 	"github.com/pedroalbanese/brainpool"
 	"github.com/pedroalbanese/frp256v1"
+	"github.com/pedroalbanese/go-nums"
 	"github.com/pedroalbanese/secp256k1"
 	"golang.org/x/crypto/cryptobyte"
 )
@@ -33,6 +34,13 @@ var (
 	oidBrainpoolP384t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 12}
 	oidBrainpoolP512r1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 13}
 	oidBrainpoolP512t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 14}
+
+	oidNumsp256d1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 1}
+	oidNumsp256t1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 2}
+	oidNumsp384d1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 3}
+	oidNumsp384t1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 4}
+	oidNumsp512d1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 5}
+	oidNumsp512t1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 6}
 )
 
 func init() {
@@ -50,6 +58,13 @@ func init() {
 	AddNamedCurve(brainpool.P384t1(), oidBrainpoolP384t1)
 	AddNamedCurve(brainpool.P512r1(), oidBrainpoolP512r1)
 	AddNamedCurve(brainpool.P512t1(), oidBrainpoolP512t1)
+	
+	AddNamedCurve(nums.P256r1(), oidNumsp256d1)
+	AddNamedCurve(nums.P256t1(), oidNumsp256t1)
+	AddNamedCurve(nums.P384r1(), oidNumsp384d1)
+	AddNamedCurve(nums.P384t1(), oidNumsp384t1)
+	AddNamedCurve(nums.P512r1(), oidNumsp512d1)
+	AddNamedCurve(nums.P512t1(), oidNumsp512t1)
 }
 
 // Private Key - Wrapping
