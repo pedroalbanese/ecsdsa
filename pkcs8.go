@@ -59,11 +59,11 @@ func init() {
 	AddNamedCurve(brainpool.P512r1(), oidBrainpoolP512r1)
 	AddNamedCurve(brainpool.P512t1(), oidBrainpoolP512t1)
 	
-	AddNamedCurve(nums.P256r1(), oidNumsp256d1)
+	AddNamedCurve(nums.P256d1(), oidNumsp256d1)
 	AddNamedCurve(nums.P256t1(), oidNumsp256t1)
-	AddNamedCurve(nums.P384r1(), oidNumsp384d1)
+	AddNamedCurve(nums.P384d1(), oidNumsp384d1)
 	AddNamedCurve(nums.P384t1(), oidNumsp384t1)
-	AddNamedCurve(nums.P512r1(), oidNumsp512d1)
+	AddNamedCurve(nums.P512d1(), oidNumsp512d1)
 	AddNamedCurve(nums.P512t1(), oidNumsp512t1)
 }
 
