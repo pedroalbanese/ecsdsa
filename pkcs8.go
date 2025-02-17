@@ -11,7 +11,7 @@ import (
 	"github.com/pedroalbanese/brainpool"
 	"github.com/pedroalbanese/frp256v1"
 	"github.com/pedroalbanese/go-nums"
-	"github.com/pedroalbanese/kg"
+	"github.com/pedroalbanese/tom"
 	"github.com/pedroalbanese/secp256k1"
 	"golang.org/x/crypto/cryptobyte"
 )
@@ -43,8 +43,8 @@ var (
 	oidNumsp512d1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 5}
 	oidNumsp512t1 = asn1.ObjectIdentifier{1, 3, 6, 1, 5, 5, 7, 0, 6}
 	
-	oidKG256r1 = asn1.ObjectIdentifier{2, 16, 100, 1, 1, 1, 1}
-	oidKG384r1 = asn1.ObjectIdentifier{2, 16, 100, 1, 1, 1, 2}
+	oidTom256 = asn1.ObjectIdentifier{1, 2, 999, 1, 1, 1, 1}
+	oidTom384 = asn1.ObjectIdentifier{1, 2, 999, 1, 1, 1, 2}
 )
 
 func init() {
@@ -70,8 +70,8 @@ func init() {
 	AddNamedCurve(nums.P512d1(), oidNumsp512d1)
 	AddNamedCurve(nums.P512t1(), oidNumsp512t1)
 	
-	AddNamedCurve(kg.P256(), oidKG256r1)
-	AddNamedCurve(kg.P384(), oidKG384r1)
+	AddNamedCurve(tom.P256(), oidTom256)
+	AddNamedCurve(tom.P384(), oidTom384)
 }
 
 // Private Key - Wrapping
